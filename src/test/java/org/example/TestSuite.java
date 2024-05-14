@@ -1,7 +1,5 @@
 package org.example;
-
 import org.testng.annotations.Test;
-
 public class TestSuite extends BaseTest{
     HomePage homePage=new HomePage();
     ElectronicsPage electronicsPage=new ElectronicsPage();

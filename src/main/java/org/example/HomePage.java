@@ -37,6 +37,9 @@ public class HomePage extends Utils{
     public void handleSearchAlert(){
         //click on search button
         clickOnElement(_clickOnSearchBtn);
+        //wait for alert is present
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.alertIsPresent());
         //Switch to alert
         driver.switchTo().alert();
         //verify the text from search alert
@@ -83,11 +86,11 @@ public class HomePage extends Utils{
             String productText = element.getText();
             System.out.println(productText);
             //asser for checking theEach product contains the search keyword or not
-            Assert.assertNotNull(productText.toLowerCase().contains(loadPage.getProperty("searchKeyword")), "Product title does not contain search keyword");
+         Assert.assertNotNull(productText.toLowerCase().contains(loadPage.getProperty("searchKeyword")),"Your testcase is fail");
         }
 
     }
-    //multi window handle functionality
+
     public void clickOnFacebook()  {
         //click on facebook button from footer
         clickOnElement(_facebookBtn);

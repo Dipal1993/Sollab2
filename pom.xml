@@ -51,5 +51,17 @@
           <artifactId>selenium-firefox-driver</artifactId>
           <version>4.19.1</version>
       </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-safari-driver</artifactId>
+      <version>4.20.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-edge-driver</artifactId>
+      <version>4.19.1</version>
+    </dependency>
+
   </dependencies>
 </project>

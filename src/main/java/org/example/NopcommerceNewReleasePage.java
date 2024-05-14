@@ -4,8 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import java.util.List;
 public class NopcommerceNewReleasePage extends Utils {
+
     //crate object of load page to read the data from dataconfigfile
     LoadPage loadPage = new LoadPage();
+    String commnetTitle=loadPage.getProperty("title")+date();
+
     //crate variable to store the locator for NopcommerceNewReleasePageTitle
     private By _pageTitle = By.xpath("//div[@class='page-title']//h1[text()='nopCommerce new release!']");
     private By _NewCommentTitle = By.xpath("//input[@id='AddNewComment_CommentTitle']");
@@ -28,6 +31,7 @@ public class NopcommerceNewReleasePage extends Utils {
     }
     //method for add news comment and verify its placement
     public void AddNewsCommentAndVerifyPlacement() {
+
         //call the method for sending the title
         sendKeyElement(_NewCommentTitle, loadPage.getProperty("commentTitle"));
         //call the method for sending the comment
